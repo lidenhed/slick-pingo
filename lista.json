@@ -1,6 +1,20 @@
-[
-    {
+[    {
       "id": 1,
+      "name": "Serra do Rio do Rastro",
+      "email": "turismo@lauromuller.sc.gov.br",
+      "foto1": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Serra_do_Rio_do_Rastro_%28SC-390%29.jpg/320px-Serra_do_Rio_do_Rastro_%28SC-390%29.jpg",
+      "foto2": "https://static.wixstatic.com/media/69eb05_1ebfead194ee451bb95b8a0d5863e37d~mv2.jpeg/v1/fill/w_989,h_1156,al_c,q_85,usm_0.66_1.00_0.01/69eb05_1ebfead194ee451bb95b8a0d5863e37d~mv2.webp",
+      "address": {
+        "street": "Rovodia SC-390",
+        "city": "Lauro Müller",
+        "zipcode": "88880-000",
+        "geo": {
+          "lat": "-28.3933",
+          "lng": "-49.5491"
+        }
+      },
+    {
+      "id": 2,
       "name": "Ponte Hercílio Luz",
       "email": "ponteviva@pmf.sc.gov.br",
       "foto1": "https://portalmakingof.com.br/uploads/posts/4fff707e8a8887c4536a3f262a38a1ea.jpg",
@@ -18,21 +32,7 @@
       "website": "http://ponteviva.pmf.sc.gov.br",
       "youtube": "https://www.youtube.com/watch?v=9dKmCVcpTIo"
     },
-    {
-      "id": 2,
-      "name": "Serra do Rio do Rastro",
-      "email": "turismo@lauromuller.sc.gov.br",
-      "foto1": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Serra_do_Rio_do_Rastro_%28SC-390%29.jpg/320px-Serra_do_Rio_do_Rastro_%28SC-390%29.jpg",
-      "foto2": "https://static.wixstatic.com/media/69eb05_1ebfead194ee451bb95b8a0d5863e37d~mv2.jpeg/v1/fill/w_989,h_1156,al_c,q_85,usm_0.66_1.00_0.01/69eb05_1ebfead194ee451bb95b8a0d5863e37d~mv2.webp",
-      "address": {
-        "street": "Rovodia SC-390",
-        "city": "Lauro Müller",
-        "zipcode": "88880-000",
-        "geo": {
-          "lat": "-28.3933",
-          "lng": "-49.5491"
-        }
-      },
+
       "phone": "48985053885",
       "website": "https://servicos.lauromuller.sc.gov.br/index/detalhes/codServico/8010",
       "youtube": "https://www.youtube.com/watch?v=RHQu3B6mczA"
