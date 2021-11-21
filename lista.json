@@ -1,4 +1,5 @@
-[    {
+[    
+     {
       "id": 1,
       "name": "Serra do Rio do Rastro",
       "email": "turismo@lauromuller.sc.gov.br",
@@ -12,7 +13,11 @@
           "lat": "-28.3933",
           "lng": "-49.5491"
         }
-      },
+       },
+      "phone": "48985053885",
+      "website": "https://servicos.lauromuller.sc.gov.br/index/detalhes/codServico/8010",
+      "youtube": "https://www.youtube.com/watch?v=RHQu3B6mczA"
+     },
     {
       "id": 2,
       "name": "Ponte Hercílio Luz",
@@ -31,11 +36,6 @@
       "phone": "4832125760",
       "website": "http://ponteviva.pmf.sc.gov.br",
       "youtube": "https://www.youtube.com/watch?v=9dKmCVcpTIo"
-    },
-
-      "phone": "48985053885",
-      "website": "https://servicos.lauromuller.sc.gov.br/index/detalhes/codServico/8010",
-      "youtube": "https://www.youtube.com/watch?v=RHQu3B6mczA"
     },
     {
       "id": 3,
