@@ -3,6 +3,8 @@
       "id": 1,
       "name": "Ponte Hercílio Luz",
       "email": "ponteviva@pmf.sc.gov.br",
+      "foto1": "https://portalmakingof.com.br/uploads/posts/4fff707e8a8887c4536a3f262a38a1ea.jpg",
+      "foto2": "https://www.viajebembrasil.com.br/viajebembrasil/img/viaje-bem-brasil-imagem-galeria-ponte-hercilio-luz-em-florianopolis-santa-catarina-5f667f1a79530_4.jpg",  
       "address": {
         "street": "Rua Jornalista Assis Chateaubriand",
         "city": "Florianópolis",
@@ -13,12 +15,15 @@
         }
       },
       "phone": "4832125760",
-      "website": "http://ponteviva.pmf.sc.gov.br"
+      "website": "http://ponteviva.pmf.sc.gov.br",
+      "youtube": "https://www.youtube.com/watch?v=9dKmCVcpTIo"
     },
     {
       "id": 2,
       "name": "Serra do Rio do Rastro",
       "email": "turismo@lauromuller.sc.gov.br",
+      "foto1": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Serra_do_Rio_do_Rastro_%28SC-390%29.jpg/320px-Serra_do_Rio_do_Rastro_%28SC-390%29.jpg",
+      "foto2": "https://static.wixstatic.com/media/69eb05_1ebfead194ee451bb95b8a0d5863e37d~mv2.jpeg/v1/fill/w_989,h_1156,al_c,q_85,usm_0.66_1.00_0.01/69eb05_1ebfead194ee451bb95b8a0d5863e37d~mv2.webp",
       "address": {
         "street": "Rovodia SC-390",
         "city": "Lauro Müller",
@@ -29,12 +34,15 @@
         }
       },
       "phone": "48985053885",
-      "website": "https://servicos.lauromuller.sc.gov.br/index/detalhes/codServico/8010"
+      "website": "https://servicos.lauromuller.sc.gov.br/index/detalhes/codServico/8010",
+      "youtube": "https://www.youtube.com/watch?v=RHQu3B6mczA"
     },
     {
       "id": 3,
       "name": "Praia Mole",
       "email": "N/A",
+      "foto1": "https://www.carpemundi.com.br/wp-content/uploads/2020/12/florianopolis-praia-mole.jpg",
+      "foto2": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Mole_e_Galheta.jpg/640px-Mole_e_Galheta.jpg",
       "address": {
         "street": "Rodovia Jornalista Manoel de Menezes",
         "city": "Florianópolis",
@@ -45,12 +53,15 @@
         }
       },
       "phone": "483251-6175",
-      "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=praia+mole"
+      "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=praia+mole",
+      "youtube": "https://www.youtube.com/watch?v=9RPmW6PfA7c"
     },
     {
       "id": 4,
       "name": "Trilha da Lagoinha do Leste",
       "email": "N/A",
+      "foto1": "https://i0.wp.com/viajandoem321.com/wp-content/uploads/2017/05/21-viajando-em-321-como-fazer-a-trilha-da-lagoinha-do-leste-matadeiro-florianopolis-santa-catarina.jpg",
+      "foto2": "https://i1.wp.com/viajandoem321.com/wp-content/uploads/2017/05/8-viajando-em-321-como-fazer-a-trilha-da-lagoinha-do-leste-matadeiro-florianopolis-santa-catarina.jpg",
       "address": {
         "street": "Rua Luís Gonzaga dos Santos",
         "city": "Florianópolis",
@@ -61,12 +72,15 @@
         }
       },
       "phone": "483251-6175",
-      "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=lagoinha+do+leste"
+      "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=lagoinha+do+leste",
+      "yotuube": "https://www.youtube.com/watch?v=U0bg6SwFm_I"
     },
     {
       "id": 5,
       "name": "Lagoa da Conceição",
       "email": "N/A",
+      "foto1": "https://www.pousadadoschas.com.br/blog/wp-content/uploads/2020/12/9.jpeg",
+      "foto2": "https://a0.muscache.com/im/pictures/765da40f-675f-448a-8f08-fd6fd9852844.jpg?im_w=1440",
       "address": {
         "street": "Avenida das Rendeiras",
         "city": "Florianópolis",
@@ -77,6 +91,7 @@
         }
       },
       "phone": "N/A",
-      "website": "N/A"
+      "website": "N/A",
+      "youtube": "https://www.youtube.com/watch?v=sc_G9LdGRWM"
     }
   ]
