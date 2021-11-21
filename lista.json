@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "name": "Ponte Hercílio Luz",
+      "email": "ponteviva@pmf.sc.gov.br",
+      "address": {
+        "street": "Rua Jornalista Assis Chateaubriand",
+        "city": "Florianópolis",
+        "zipcode": "88010-150",
+        "geo": {
+          "lat": "-27.5930",
+          "lng": "-48.5615"
+        }
+      },
+      "phone": "4832125760",
+      "website": "http://ponteviva.pmf.sc.gov.br"
+    },
+    {
+      "id": 2,
+      "name": "Serra do Rio do Rastro",
+      "email": "turismo@lauromuller.sc.gov.br",
+      "address": {
+        "street": "Rovodia SC-390",
+        "city": "Lauro Müller",
+        "zipcode": "88880-000",
+        "geo": {
+          "lat": "-28.3933",
+          "lng": "-49.5491"
+        }
+      },
+      "phone": "48985053885",
+      "website": "https://servicos.lauromuller.sc.gov.br/index/detalhes/codServico/8010"
+    },
+    {
+      "id": 3,
+      "name": "Praia Mole",
+      "email": "N/A",
+      "address": {
+        "street": "Rodovia Jornalista Manoel de Menezes",
+        "city": "Florianópolis",
+        "zipcode": "88061-700",
+        "geo": {
+          "lat": "-27.6029",
+          "lng": "-48.4354"
+        }
+      },
+      "phone": "483251-6175",
+      "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=praia+mole"
+    },
+    {
+      "id": 4,
+      "name": "Trilha da Lagoinha do Leste",
+      "email": "N/A",
+      "address": {
+        "street": "Rua Luís Gonzaga dos Santos",
+        "city": "Florianópolis",
+        "zipcode": "88066-400",
+        "geo": {
+          "lat": "-27.7574",
+          "lng": "-48.4962"
+        }
+      },
+      "phone": "483251-6175",
+      "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=lagoinha+do+leste"
+    },
+    {
+      "id": 5,
+      "name": "Lagoa da Conceição",
+      "email": "N/A",
+      "address": {
+        "street": "Avenida das Rendeiras",
+        "city": "Florianópolis",
+        "zipcode": "88062-400",
+        "geo": {
+          "lat": "-27.6092",
+          "lng": "-48.4494"
+        }
+      },
+      "phone": "N/A",
+      "website": "N/A"
+    }
+  ]
