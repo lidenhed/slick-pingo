@@ -38,8 +38,8 @@
       "phone": "04832125760",
       "website": "http://ponteviva.pmf.sc.gov.br",
       "youtube": "https://www.youtube.com/watch?v=9dKmCVcpTIo",
-      "horarios": `Travessia a pé: sem restrição de horários;{"\n\t}
-                   Travessia de carro: das 9h às 6h do dia seguinte;{"\n\t}
+      "horarios": `Travessia a pé: sem restrição de horários;{"\n\t"}
+                   Travessia de carro: das 9h às 6h do dia seguinte;{"\n\t"}
                    Finais de semana: apenas pedestres.`
     },
      
