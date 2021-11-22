@@ -1,5 +1,5 @@
 [    
-     {
+    {
       "id": 1,
       "name": "Serra do Rio do Rastro",
       "email": "turismo@lauromuller.sc.gov.br",
@@ -13,11 +13,12 @@
           "lat": "-28.3933",
           "lng": "-49.5491"
         }
-       },
+      },
       "phone": "48985053885",
       "website": "https://servicos.lauromuller.sc.gov.br/index/detalhes/codServico/8010",
       "youtube": "https://www.youtube.com/watch?v=RHQu3B6mczA"
      },
+     
     {
       "id": 2,
       "name": "Ponte Hercílio Luz",
@@ -37,6 +38,7 @@
       "website": "http://ponteviva.pmf.sc.gov.br",
       "youtube": "https://www.youtube.com/watch?v=9dKmCVcpTIo"
     },
+     
     {
       "id": 3,
       "name": "Praia Mole",
@@ -56,6 +58,7 @@
       "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=praia+mole",
       "youtube": "https://www.youtube.com/watch?v=9RPmW6PfA7c"
     },
+     
     {
       "id": 4,
       "name": "Trilha da Lagoinha do Leste",
@@ -75,6 +78,7 @@
       "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=lagoinha+do+leste",
       "yotuube": "https://www.youtube.com/watch?v=U0bg6SwFm_I"
     },
+     
     {
       "id": 5,
       "name": "Lagoa da Conceição",
