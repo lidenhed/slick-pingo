@@ -14,9 +14,10 @@
           "lng": "-49.5491"
         }
       },
-      "phone": "48985053885",
+      "phone": "048985053885",
       "website": "https://servicos.lauromuller.sc.gov.br/index/detalhes/codServico/8010",
-      "youtube": "https://www.youtube.com/watch?v=RHQu3B6mczA"
+      "youtube": "https://www.youtube.com/watch?v=RHQu3B6mczA",
+      "horarios": "Sem restrição de horários."
      },
      
     {
@@ -34,9 +35,11 @@
           "lng": "-48.5615"
         }
       },
-      "phone": "4832125760",
+      "phone": "04832125760",
       "website": "http://ponteviva.pmf.sc.gov.br",
-      "youtube": "https://www.youtube.com/watch?v=9dKmCVcpTIo"
+      "youtube": "https://www.youtube.com/watch?v=9dKmCVcpTIo",
+      "horarios": "Travessia a pé: sem restrição de horários.\
+                   Travessia de carro: das 9h às 6h do dia seguinte."
     },
      
     {
@@ -54,9 +57,10 @@
           "lng": "-48.4354"
         }
       },
-      "phone": "483251-6175",
+      "phone": "04832516175",
       "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=praia+mole",
-      "youtube": "https://www.youtube.com/watch?v=9RPmW6PfA7c"
+      "youtube": "https://www.youtube.com/watch?v=9RPmW6PfA7c",
+      "horarios": "Sem restrição de horários."
     },
      
     {
@@ -74,9 +78,10 @@
           "lng": "-48.4962"
         }
       },
-      "phone": "483251-6175",
+      "phone": "04832516175",
       "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=lagoinha+do+leste",
-      "yotuube": "https://www.youtube.com/watch?v=U0bg6SwFm_I"
+      "yotuube": "https://www.youtube.com/watch?v=U0bg6SwFm_I",
+      "horarios": "Sem restrição de horários."
     },
      
     {
@@ -94,8 +99,9 @@
           "lng": "-48.4494"
         }
       },
-      "phone": "N/A",
-      "website": "N/A",
-      "youtube": "https://www.youtube.com/watch?v=sc_G9LdGRWM"
+      "phone": "04832516175",
+      "website": "https://www.pmf.sc.gov.br/entidades/turismo/index.php?cms=centro+de+atendimento+ao+turista&menu=0",
+      "youtube": "https://www.youtube.com/watch?v=sc_G9LdGRWM",
+      "horarios": "Sem restrição de horários."
     }
   ]
