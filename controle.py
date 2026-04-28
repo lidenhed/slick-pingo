@@ -99,7 +99,7 @@ class Controle:
             if not registro.get(palavraComparada[i]):
                 registro.update({palavraComparada[i]: []})
             for j in range(len(palavraBuscada)):
-                if palavraBuscada[i] == palavraComparada[j]:
+                if palavraBuscada[j] == palavraComparada[i]:
                     registro.get(palavraComparada[i]).append((i, j))
         for v in registro.values():
             a = sorted(v, key = lambda a: abs(a[0]-a[1]))
@@ -115,14 +115,14 @@ class Controle:
     def buscaHeuristica(self, palavraBuscada, palavraComparada):
         p1 = self.heuristicaPosicaoLetras(palavraBuscada, palavraComparada)
         p2 = self.heuristicaQtdLetras(palavraBuscada, palavraComparada)
-        return 2 / ((1/p1) + (1/p2))
+        return (p1 + p2) / 2
 
     def busca(self, palavraBuscada):
         match = []
         for livro in self.__livros:
             palavras = livro.retornaCapitulos().split()
             for palavra in palavras:
-                if self.buscaHeuristica(palavraBuscada, palavra) >= 0.75:
+                if self.buscaHeuristica(palavraBuscada, palavra) >= 0.7:
                     match.append(palavra)
         return sorted(match)
 

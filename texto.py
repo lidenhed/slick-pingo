@@ -3,31 +3,23 @@ class Versiculo:
         if len(texto) == 0:
             raise ValueError('Necessário texto para criar um versículo.')
         else:
-            self.__texto = texto
+            self.__texto = texto.strip()
         self.__numero = numero
 
     def __str__(self):
         return f"{self.__numero} {self.__texto}"
-    
+
     def __repr__(self):
         return f"Versiculo({self.__texto}, {self.__numero})"
 
-    def numeroPalavras(self):
-        palavras = [palavra for palavra in self.__texto.split(" ") if len(palavra) > 0]
-        return len(palavras)
 
 class Capitulo:
     def __init__(self, texto, numero = 0):
+        self.__texto = texto
         self.__versiculos = []
         self.__numero = numero
-        versiculos = texto.split("\n")
-        for versiculo in versiculos:
-            self.__versiculos.append(Versiculo(versiculo, versiculos.index(versiculo) + 1))
-
-    def adicionaVersiculo(self, texto, numero):
-        versiculo = Versiculo(texto, numero)
-        self.__versiculos.insert(numero - 1, versiculo)
-
+        self.adiciona_versiculos(texto)
+        
     @property
     def numero(self):
         return self.__numero
@@ -39,9 +31,17 @@ class Capitulo:
     @numero.setter
     def numero(self, valor):
         self.__numero = valor
+
+    def adiciona_versiculos(self, texto):
+        versiculos = texto.split("\n")
+        for versiculo in versiculos:
+            self.__versiculos.append(Versiculo(versiculo, versiculos.index(versiculo) + 1))
     
     def __str__(self):
         return f'Capítulo {self.numero}'
+
+    def __repr__(self):
+        return f"Capitulo({self.__texto}, {self.__numero})"
 
 
 class Livro:
@@ -58,6 +58,14 @@ class Livro:
             self.__numeroCapitulos += 1
         else:
             raise ValueError(('Para criar um Capítulo é necessário um texto'))
+    
+    def criaCapitulos(self, texto):
+        if len(texto) > 0:
+            capitulos = texto.split('\n\n')
+            for capitulo in capitulos:
+                self.criaCapitulo(capitulo, capitulos.index(capitulo) + 1)
+        else:
+            raise ValueError(('Para criar Capítulos é necessário um texto'))
     
     @property
     def nome(self):
@@ -76,11 +84,12 @@ class Livro:
             print(capitulo)
             self.imprimeCapitulo(self.__capitulos.index(capitulo))
 
-    
     def retornaCapitulos(self):
         texto = ''
         for capitulo in self.__capitulos:
+            texto += str(capitulo).upper() + '\n'
             for versiculo in capitulo.versiculos:
                 texto += str(versiculo) + '\n'
+            texto += '\n'
         return texto
 
