@@ -17,74 +17,136 @@ def ler_arquivo(caminho):
 
     else:
         raise ValueError("Formato não suportado")
-
-def correcao_erros_comuns(texto):
-    if ' -' in texto:
-        i = texto.index(' -')
-        texto = texto[:i] + '-' + texto[i+2:]
-    return texto
-
-def primeira_deputacao(texto):
-    texto = texto.split('\n')
-    novo_texto = ''
-    fim_da_pagina = False
-    inicio = False
-    for line in texto:
-        line = correcao_erros_comuns(line)
-        palavras = line.split(' ')
-        partes = [palavra for palavra in palavras if len(palavra) > 0]
-        if len(partes) > 0:
-            if partes[-1].isdigit():
-                fim_da_pagina = True
-            primeira_palavra = partes[0]
-            i = 0
-            while i < len(primeira_palavra) and primeira_palavra[i].isdigit():
-                i += 1
-            if 0 < i and i < len(primeira_palavra):
-                if primeira_palavra[i] not in '.,;?!':
-                    numero = primeira_palavra[0:i]
-                    primeira_palavra = primeira_palavra[i:]
-                    partes[0] = numero + ' ' + primeira_palavra
-                if int(numero) == 1:
-                    inicio = True
-                else:
-                    inicio = False
-
-            if fim_da_pagina:
-                novo_texto += ' ' + ' '.join(partes[:-1])
-                fim_da_pagina = False
-            elif inicio:
-                novo_texto += '\n\n' + ' '.join(partes)
-
-
-            novo_texto += frase
-
-    return novo_texto
-
-    def segunda_deputacao(texto):
-        pass
-
     
-
-
-if __name__ == "__main__":
-    caminho = input('Informe o caminho do documento a ser lido: ')
-    texto = ler_arquivo(caminho)
-    primeira_etapa = primeira_deputacao(texto)
-
-
-
-            
-    with open("arquivo1.txt", "w", encoding="utf-8") as f:
-        f.write(primeira_etapa)
-
-    # /Users/joaovictor/Desktop/123.pdf
-    # /Users/joaovictor/Desktop/321.pdf
-
-
-
-    def substitui_caracteres(sentenca, substituir, substituto):
+def substitui_caracteres(sentenca, substituir, substituto):
         i = sentenca.index(substituir)
         d = len(substituir)
         nova_sentenca = sentenca[:i] + substituto + sentenca[i+d:]
         return nova_sentenca
+
+def correcao_erros_comuns(texto):
+    while ' -' in texto:
+        texto = substitui_caracteres(texto, ' -', '-')
+    while '- ' in texto:
+        texto = substitui_caracteres(texto, '- ', '-')
+    while ' .' in texto:
+        texto = substitui_caracteres(texto, ' .', '.')
+    while ' ;' in texto:
+        texto = substitui_caracteres(texto, ' ;', ';')
+    while '.”' in texto:
+        texto = substitui_caracteres(texto, '.”', '”.')
+    while ' ,' in texto:
+        texto = substitui_caracteres(texto, ' ,', ',')
+    while ' :' in texto:
+        texto = substitui_caracteres(texto, ' :', ':')
+    while '.)' in texto:
+        texto = substitui_caracteres(texto, '.)', ').')
+    return texto
+
+def primeira_depuracao(texto):
+    texto = texto.split('\n')
+    novo_texto = ''
+    fim_da_pagina = False
+    for line in texto:
+        palavras = line.split(' ')
+        partes = [palavra for palavra in palavras if len(palavra) > 0]
+        if len(partes) > 0:
+            primeira_palavra = partes[0]
+            i = 0
+            while i < len(primeira_palavra) and primeira_palavra[i].isdigit():
+                i += 1
+            if 0 < i and i < len(primeira_palavra) and primeira_palavra[i] not in '.,;?!':
+                fim_da_pagina = False
+                numero = primeira_palavra[0:i]
+                primeira_palavra = primeira_palavra[i:]
+                partes[0] = primeira_palavra
+                if int(numero) == 1:
+                    partes = ['\n\n' + numero + '\t'] + partes
+                else:
+                    partes = ['\n' + numero + '\t'] + partes
+            else:
+                partes = [''] + partes
+                if primeira_palavra.islower():
+                    fim_da_pagina = False
+            if not fim_da_pagina:
+                if partes[-1].isdigit():
+                    partes = partes[:-1]
+                    fim_da_pagina = True
+                frase = ' '.join(partes)
+                novo_texto += frase
+    novo_texto = correcao_erros_comuns(novo_texto)
+    return novo_texto
+
+
+def segunda_depuracao(texto):
+    linhas = texto.split('\n')
+    tuplas = []
+    frases = []
+    frase_anterior = ''
+    for linha in linhas:
+        posicao = linhas.index(linha)
+        palavras = linha.split()
+        if len(palavras) > 0 and palavras[0].isdigit() and palavras[1].islower()\
+                and len(frases) > 0 and frase_anterior == frases[-1]:
+            frases.pop()
+            tuplas.pop()
+            frase_anterior = ''
+        i = len(linha)-1
+        while i >= 0 and linha[i] not in '.?!”":;':
+            i -= 1
+        frase = linha[i+1: ]
+        if len(frase) > 0 and frase[-1] not in [',',')','”','’']:
+            frases.append(frase)
+            tuplas.append((frase, posicao))
+            frase_anterior = frase
+        else:
+            frase_anterior = ''
+    frases = '\n'.join(frases)
+    return frases, tuplas
+
+def terceira_depuracao(texto, tuplas):
+    linhas = texto.split('\n')
+    for tupla in tuplas:
+        trecho, posicao = tupla
+        frase = linhas[posicao]
+        if trecho in frase:
+            nova_frase = frase[:frase.index(trecho)].strip()
+            linhas[posicao] = nova_frase
+    return '\n'.join(linhas)
+
+
+def ultimo_sinal(texto):
+    linhas = texto.split('\n')
+    sinais = []
+    for linha in linhas:
+        linha = linha.split(' ')
+        linha = [palavra for palavra in linha if len(palavra) > 0]
+        if len(linha) > 0:
+            ultima_palavra = linha[-1]
+            if len(ultima_palavra) > 0:
+                sinais.append(ultima_palavra[-1])
+    texto = ''.join(sinais)
+    return str(set(texto))
+    
+
+if __name__ == "__main__":
+    caminho = input('Informe o caminho do documento a ser lido: ')
+    texto = ler_arquivo(caminho)
+    primeira_etapa = primeira_depuracao(texto)
+    with open("1.txt", "w", encoding="utf-8") as f:
+        f.write(primeira_etapa)
+    a, b = segunda_depuracao(primeira_etapa)
+    with open("2.txt", "w", encoding="utf-8") as f:
+        f.write(a)
+    terceira_etapa = terceira_depuracao(primeira_etapa, b)
+    with open("3.txt", "w", encoding="utf-8") as f:
+        f.write(terceira_etapa)
+
+    # /Users/joaovictor/Desktop/123.pdf
+    # /Users/joaovictor/Desktop/321.pdf
+    # /Users/joaovictor/Desktop/1.pdf
+    # /Users/joaovictor/Desktop/Portugues-NVI-All-Bible.pdf
+
+
+
+    
