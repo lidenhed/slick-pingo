@@ -97,7 +97,7 @@ def segunda_depuracao(texto):
         frase = linha[i+1: ]
         if len(frase) > 0 and frase[-1] not in [',',')','”','’']:
             frases.append(frase)
-            tuplas.append((frase, posicao))
+            tuplas.append((frase.strip(), posicao))
             frase_anterior = frase
         else:
             frase_anterior = ''
@@ -109,9 +109,14 @@ def terceira_depuracao(texto, tuplas):
     for tupla in tuplas:
         trecho, posicao = tupla
         frase = linhas[posicao]
-        if trecho in frase:
-            nova_frase = frase[:frase.index(trecho)].strip()
-            linhas[posicao] = nova_frase
+        indicefinal = 0
+        while frase.count(trecho) > 0:
+            indice = frase.find(trecho)
+            indicefinal += indice + len(trecho)
+            frase = frase[indice+len(trecho): ]
+        indicefinal -= len(trecho)
+        nova_frase = linhas[posicao][:indicefinal]
+        linhas[posicao] = nova_frase.strip()
     return '\n'.join(linhas)
 
 
